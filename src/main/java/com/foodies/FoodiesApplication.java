@@ -12,6 +12,7 @@ public class FoodiesApplication implements WebMvcConfigurer {
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/resources/**").addResourceLocations("classpath:/static/");
+		System.out.println("addResourceHandler()");
 	}
 
 	@Override
@@ -21,6 +22,7 @@ public class FoodiesApplication implements WebMvcConfigurer {
 		registry.addViewController("/team").setViewName("team");
 		registry.addViewController("/special-dishes").setViewName("special-dishes");
 		registry.addViewController("/menu").setViewName("menu");
+		System.out.println("addViewControllers()");
 	}
 
 	public static void main(String[] args) {
