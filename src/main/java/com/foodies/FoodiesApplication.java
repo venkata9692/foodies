@@ -1,7 +1,10 @@
 package com.foodies;
 
+import java.time.Duration;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.http.CacheControl;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -11,7 +14,8 @@ public class FoodiesApplication implements WebMvcConfigurer {
 
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/resources/**").addResourceLocations("classpath:/static/");
+		CacheControl cc = CacheControl.maxAge(Duration.ofHours(1)).cachePublic().sMaxAge(Duration.ofHours(2));
+		registry.addResourceHandler("/resources/**").addResourceLocations("classpath:/static/").setCacheControl(cc);
 		System.out.println("addResourceHandler()");
 	}
 
