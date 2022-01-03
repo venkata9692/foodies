@@ -141,7 +141,7 @@
                             Book Now
                         </h2>
                     </div>
-                    <form method="post" name="contact-us" action="${pageContext.request.contextPath}/reservation">
+                    <form method="post" name="contact-us" action="reservation">
                         <div class="row">
                             <div class="col-md-12 form-group">
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Name">
