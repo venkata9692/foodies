@@ -117,7 +117,13 @@
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="reservation">Reservation</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Reservation
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="reservation">Book Table</a>
+                          <a class="dropdown-item" href="list">List</a>
+                        </div>
                     </li>
                 </div>
                 <li class="nav-item">
