@@ -1,13 +1,13 @@
 pipeline {
     agent any
-    stages{
+    stages {
         stage('checkout scm') {
-            step {
+            steps {
                 echo 'pulling code from git repository'
             }
         }
         stage('build') {
-            step {
+            steps {
                 echo 'building project using maven'
             }
         }
